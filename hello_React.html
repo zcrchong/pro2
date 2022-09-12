@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello_react</title>
+</head>
+<body>
+    <!--添加文档主题内容-->
+    <div id="id-div-react"></div>
+
+    <!--引入react核心库-->
+    <script type="text/javascript" src="../../js/react.development.js"></script>
+    <!--  引入react-dom 用于支持react操作DOM  -->
+    <script type="text/javascript" src="../../js/react-dom.development.js"></script>
+    <!--  引入babel，用于将jsx转为js-->
+    <script type="text/javascript" src="../../js/babel.min.js"></script>
+
+    <script type="text/babel">/*此处一定要写babel*/
+        //TODO：get div
+        let divReact = document.getElementById('id-div-react')
+        // TODO : JS DOM
+        const jsSpan = document.createElement('span')
+        const jsH3 = document.createElement('h3')
+        jsH3.innerText = "JS DOM"
+        const  jsP = document.createElement('p')
+        jsP.innerText = "jsp的内容"
+        jsSpan.appendChild(jsH3)
+        jsSpan.appendChild(jsP)
+        divReact.appendChild(jsSpan)
+
+    </script>
+</body>
+</html>
